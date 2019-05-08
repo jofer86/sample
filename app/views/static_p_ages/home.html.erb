@@ -1,0 +1,21 @@
+<% provide(:title, "Home")%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1 class="title">Home</h1>
+    <p>
+      Get help on the Ruby on Rails Tutorial at the
+      <a href="https://www.railstutorial.org/help">Rails Tutorial help
+      section</a>.
+      To get help on this sample app, see the
+      <a href="https://www.railstutorial.org/book"><em>Ruby on Rails
+      Tutorial</em> book</a>.
+      <br>
+      <%= link_to 'Help', static_p_ages_help_path %> | <%= link_to 'About', static_p_ages_about_path %> | <%= link_to 'Contact', static_p_ages_contact_path %> 
+
+    </p>
+  </body>
+</html>
