@@ -33,3 +33,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .hov:hover{
   background: rgba(94,89,94,1);
 }
+
+.b-trans{
+  border-color: none;
+  background-color:black;
+  color:white;
+  transition: background-color 1.0s ease;
+  transition: color 1.0s ease;
+}
+
+.b-trans:hover{
+  background-color: white;
+  color: black;
+}
