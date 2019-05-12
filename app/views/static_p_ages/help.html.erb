@@ -4,15 +4,33 @@
     <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
   </head>
   <body>
-  <%= render 'layouts/header' %>
-    <h1 class="title">Help</h1>
-    <p>
-      Get help on the Ruby on Rails Tutorial at the
-      <a href="https://www.railstutorial.org/help">Rails Tutorial help
-      section</a>.
-      To get help on this sample app, see the
-      <a href="https://www.railstutorial.org/book"><em>Ruby on Rails
-
-    </p>
-  <%= render 'layouts/footer' %>
+      <head>
+    <title><%= full_title(yield(:title)) %></title>
+  </head>
+    
+  <body>
+    <section class="hero is-bold gradient  is-fullheight">
+      <%= render 'layouts/header'%>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title text-c">
+            Help
+          </h1>
+          <h2 class="subtitle text-c">
+            Get help on the Ruby on Rails Tutorial at the
+            <a href="https://www.railstutorial.org/help">Rails Tutorial help section</a>.
+            To get help on this sample app, see the
+            <a href="https://www.railstutorial.org/book"><em>Ruby on Rails Tutorial</em> book</a>.
+          </h2>          
+        </div>        
+      </div>   
+      <%= render 'layouts/footer'%>  
+    </section>    
   </body>
+
+
+
+
+
+
+

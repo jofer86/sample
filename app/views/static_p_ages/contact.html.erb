@@ -1,9 +1,18 @@
 <% provide(:title, "Contact") %>
-<%= render 'layouts/header' %>
-<h1 class="title">Contact</h1>
-<p>
-  Contact the Ruby on Rails Tutorial about the sample app at the
-  <a href="https://www.railstutorial.org/contact">contact page</a>.
-    
-</p>
-<%= render 'layouts/footer' %>
+  <body>
+    <section class="hero is-bold gradient  is-fullheight">
+      <%= render 'layouts/header'%>
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title text-c">
+            Contact
+          </h1>
+          <h2 class="subtitle text-c">
+            Contact the Ruby on Rails Tutorial about the sample app at the
+            <a href="https://www.railstutorial.org/contact">contact page</a>.    
+          </h2>          
+        </div>        
+      </div>   
+      <%= render 'layouts/footer'%>  
+    </section>    
+  </body>
