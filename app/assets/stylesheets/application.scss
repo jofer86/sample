@@ -1,4 +1,4 @@
-@import 'bulma'
+@import 'bulma';
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,3 +14,18 @@
  *= require_tree .
  *= require_self
  */
+
+ .gradient{
+  background: rgba(0,0,0,1);
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(94,89,94,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(94,89,94,1)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(94,89,94,1) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(94,89,94,1) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(94,89,94,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(94,89,94,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#5e595e', GradientType=0 );
+}
+
+.text-c {
+  color: rgb(207, 207, 207)
+}
