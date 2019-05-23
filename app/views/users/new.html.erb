@@ -1,18 +1,32 @@
 <% provide(:title, 'Sign up') %>
-<body>
-    <section class="hero is-bold gradient  is-fullheight">
-      <%= render 'layouts/header'%>
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title text-c">
-            Sign up!
-          </h1>
-          <h2 class="subtitle text-c">
-            This will be a signup page for new users.
-          </h2>        
-        </div>        
-      </div>   
-      <%= render 'layouts/footer'%>  
-    </section>    
-  </body>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@user.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(@user, url: signup_path) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password, "Confirmation" %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Create my account", class: "button" %>
+
+<% end %>
 
