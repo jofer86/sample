@@ -4,7 +4,7 @@
     
   <body>
     <section class="hero gradient  is-fullheight">
-      <%= render 'layouts/header'%>
+     
       <div class="hero-body">
         <div class="container">
           <h1 class="title text-c">
@@ -18,9 +18,10 @@
           </h2>
           <%= image_tag "cute.jpg", class: "subtitle"  %>
           <%= link_to "Sign up now", signup_path, class: "button is-large b-trans" %>
+          <%= link_to "Log in", login_path, class: "button is-large b-trans" %>
         </div>        
       </div>   
-      <%= render 'layouts/footer'%>  
+      
     </section>    
   </body>
   

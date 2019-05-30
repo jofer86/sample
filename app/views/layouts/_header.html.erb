@@ -8,7 +8,15 @@
     <div class="navbar-end">
       <%= link_to "Home", root_path, class: "navbar-item" %>
       <%= link_to "Help", help_path, class: "navbar-item" %>
-      <%# <%= link_to "Log-in", root_path, class: "navbar-item" %>    
+      <% if logged_in? %>.
+        <%= link_to "Users", '#', class: "navbar-item" %>
+        <%= link_to "Profile", current_user, class: "navbar-item" %>
+        <%= link_to "Settings", '#', class: "navbar-item"%>
+        <%= link_to "Logout", logout_path, method: :delete,  class: "navbar-item" %>
+      <% else %>
+        <%= link_to "Log-in", login_path, class: "navbar-item" %>
+      <% end %>
+          
     </div>
   </div>
 </nav>
